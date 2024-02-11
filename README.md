@@ -1,2 +1,2 @@
-# Parallax Animation in React
+
 
