@@ -1,8 +1,11 @@
 
 #textblock {
-  background-color: #210002;
+  background-color: black;
   height: 100vh;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .App{
   background: black;
@@ -50,19 +53,78 @@
 }
 
 #moon {
-  background-image: url(./images/moon.svg);
+  background-image: url("./images/moon.svg"); 
   z-index: 0;
 }
+
 #grass {
   background-image: url(./images/grass.svg);
   z-index: 4;
+  animation: shake 0.5s cubic-bezier(0.16, 1, 0.3, 1) ;
+  animation-direction: alternate;
 }
 #text{
   font-size: 100px;
   color: white;
   margin-top: 400px;
-  font-family: "Protest Riot", sans-serif;
+  font-family: "Irish Grover", system-ui;
   font-weight: 400;
   font-style: normal;
+  animation: slideup 0.3s linear;
+  position: relative; /* Enables animation based on top position */
 }
 
+#text1{
+  font-size: 80px;
+  color: white;
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  animation: slideup 0.3s linear;
+  position: relative; /* Enables animation based on top position */
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(-100%); /* Start out of view */
+}
+100% {
+    transform: translateY(0); /* Animate to top position */
+}
+}
+
+@keyframes shake {
+  from, to {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-2px);
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  50%{
+    transform: translate(-2px);
+  }
+  100%{
+    transform: translate(2px);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #moon {
+    background-image: url("./images/centre_moon.svg"); 
+    z-index: 0;
+    transform: scale(0.5)
+  }
+
+  #text{
+    font-size: 70px;
+    color: white;
+    margin-top: 500px;
+  }
+
+  
+  
+ 
+}

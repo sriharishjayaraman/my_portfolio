@@ -13,8 +13,8 @@ function App() {
         <ParallaxLayer offset={0} speed={0.25}>
           <div class="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
-        <ParallaxLayer className="moon" offset={0} speed={-0.4}>
-          <div class="animation_layer parallax" id="moon"></div>
+        <ParallaxLayer offset={0} speed={-0.4}>
+          <div class="animation_layer parallax moon" id="moon"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} speed={0.3}>
           <div class="animation_layer parallax" id="jungle1"></div>
