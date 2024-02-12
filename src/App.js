@@ -1,6 +1,7 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import TextBlock from "./textBlock";
 import "./App.css";
+import resume from "./Resume.pdf";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         style={{ top: "0", left: "0", background: "black" }}
         class="animation"
       >
+        <a href={resume} download="Resume" class="btn">
+          Resume
+        </a>
         <ParallaxLayer offset={0} speed={0.25}>
           <div class="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
