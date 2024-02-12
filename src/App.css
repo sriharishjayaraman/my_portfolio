@@ -1,6 +1,6 @@
 #textblock {
   background-color: black;
-  height: 100vh;
+  height: 110vh;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -9,6 +9,7 @@
 }
 .App {
   background: black;
+  scroll-behavior: smooth;
 }
 
 .animation,

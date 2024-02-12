@@ -1,15 +1,17 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// import { config } from "react-spring";
 import TextBlock from "./textBlock";
 import "./App.css";
 import resume from "./Resume.pdf";
 
 function App() {
   return (
-    <div className="App">
+    <div id="content" className="App">
       <Parallax
         pages={2}
         style={{ top: "0", left: "0", background: "black" }}
-        class="animation"
+        // config={{ ...config.default, tension: 6, friction: 10 }}
+        className="animation"
       >
         <a href={resume} download="Resume" class="btn">
           Resume
